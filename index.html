@@ -490,7 +490,7 @@
                                 <h2 class="card-title">Artigos do Código Penal</h2>
                                 <p class="card-description">Selecione os artigos aplicáveis ao caso</p>
                             </div>
-                            <input class="search-input" type="text" id="searchInput" placeholder="Buscar por código do artigo...">
+                            <input class="search-input" type="text" id="searchInput" placeholder="Buscar por nome do artigo...">
                         </div>
                     </div>
                     <div class="card-content">
@@ -689,7 +689,7 @@
         // Renderizar artigos
         function renderArticles() {
             const filteredArticles = artigos.filter(artigo => 
-                artigo.codigo.toLowerCase().includes(searchTerm.toLowerCase())
+                artigo.nome.toLowerCase().includes(searchTerm.toLowerCase())
             );
 
             if (filteredArticles.length === 0 && searchTerm) {
@@ -930,4 +930,5 @@
     </script>
 </body>
 </html>
+
 
